@@ -1,12 +1,12 @@
 # Variables
 
-variable "access_key" {}
-variable "secret_key" {}
-variable "region" {
-  default = "us-east-2"
-}
+# variable "access_key" {}
+# variable "secret_key" {}
+# variable "region" {
+#   default = "us-east-2"
+# }
 variable "availability_zone" {
-  default = "us-east-2a"
+  default = "eu-central-1"
 }
 variable "cidr_block_range" {
   description = "The CIDR block for the VPC"
