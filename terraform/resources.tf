@@ -27,10 +27,10 @@ data "terraform_remote_state" "network" {
 }
 
 module "securityGroupModule" {
-    source			= "./modules/securityGroup"
- 	access_key		= "${var.access_key}"
-	secret_key		= "${var.secret_key}"
-	region			= "${var.region}"
+  source			= "./modules/securityGroup"
+ 	# access_key		= "${var.access_key}"
+	# secret_key		= "${var.secret_key}"
+	# region			= "${var.region}"
 	vpc_id			= "${data.terraform_remote_state.network.outputs.vpc_id}"
 	environment_tag = "${var.environment_tag}"
 }
