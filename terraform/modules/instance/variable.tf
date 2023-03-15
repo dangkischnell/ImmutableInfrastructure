@@ -28,7 +28,7 @@ variable "key_pair_name" {
 }
 variable "instance_ami" {
   description = "EC2 instance ami"
-  default = "ami-0cf31d971a3ca20d6"
+  default = "ami-06616b7884ac98cdd"
 }
 variable "instance_type" {
   description = "EC2 instance type"
