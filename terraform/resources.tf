@@ -37,9 +37,9 @@ module "securityGroupModule" {
 
 module "instanceModule" {
 	source 				= "./modules/instance"
-	access_key 			= "${var.access_key}"
- 	secret_key 			= "${var.secret_key}"
- 	region     			= "${var.region}"
+	# access_key 			= "${var.access_key}"
+ 	# secret_key 			= "${var.secret_key}"
+ 	# region     			= "${var.region}"
  	instance_ami		= "${data.aws_ami.ec2-ami.id}"
  	vpc_id 				= "${data.terraform_remote_state.network.outputs.vpc_id}"
 	subnet_public_id	= "${data.terraform_remote_state.network.outputs.public_subnets[0]}"
