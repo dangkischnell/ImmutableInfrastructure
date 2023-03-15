@@ -6,7 +6,7 @@
 #   default = "us-east-2"
 # }
 variable "availability_zone" {
-  default = "eu-central-1"
+  default = "eu-central-1a"
 }
 variable "cidr_block_range" {
   description = "The CIDR block for the VPC"
