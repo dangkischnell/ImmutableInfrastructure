@@ -28,17 +28,9 @@ variable "ssh_username" {
   default = "ec2-user"
 }
 
-data "terraform_remote_state" "network" {
-  backend = "local"
-
-  config = {
-    path = "../networkTerraform/terraform.tfstate"
-  }
-}
-
 variable "subnet_id" {
   type    = string
-  default = "${data.terraform_remote_state.network.outputs.public_subnets[0]}"
+  default = "$(terraform output public_subnets)"
 }
 
 # "timestamp" template function replacement
