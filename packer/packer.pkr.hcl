@@ -30,7 +30,7 @@ variable "ssh_username" {
 
 variable "subnet_id" {
   type    = string
-  default = ""
+  default = "subnet-058668ff7e2154200"
 }
 
 # "timestamp" template function replacement
