@@ -4,6 +4,7 @@
 #   region     = "${var.region}"
 # }
 
+# to get the all data from the ec2 terraform resource
 data "aws_ami" "ec2-ami" {
   filter {
     name   = "state"
@@ -18,6 +19,7 @@ data "aws_ami" "ec2-ami" {
   most_recent = true
 }
 
+# to get the all data from the network terraform resource
 data "terraform_remote_state" "network" {
   backend = "local"
 
@@ -26,6 +28,7 @@ data "terraform_remote_state" "network" {
   }
 }
 
+# use the vpc_ip extracted from the data above
 module "securityGroupModule" {
   source			= "./modules/securityGroup"
  	# access_key		= "${var.access_key}"
