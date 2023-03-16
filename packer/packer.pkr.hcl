@@ -30,7 +30,7 @@ variable "ssh_username" {
 
 variable "subnet_id" {
   type    = string
-  default = "$(terraform output public_subnets)"
+  default = ""
 }
 
 # "timestamp" template function replacement
